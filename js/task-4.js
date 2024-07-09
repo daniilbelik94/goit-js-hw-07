@@ -1,33 +1,23 @@
-class StringBuilder {
-  #value;
+const loginForm = document.querySelector('.login-form');
 
-  constructor(initialValue) {
-    this.#value = initialValue;
+loginForm.addEventListener('submit', event => {
+  event.preventDefault();
+  
+  const {
+    elements: { email, password }
+  } = event.currentTarget;
+
+  if (email.value.trim() === '' || password.value.trim() === '') {
+    alert('All form fields must be filled in');
+    return;
   }
 
-  getValue() {
-    return this.#value;
-  }
+  const formData = {
+    email: email.value.trim(),
+    password: password.value.trim(),
+  };
 
-  padEnd(str) {
-    this.#value += str;
-  }
+  console.log(formData);
+  loginForm.reset();
+});
 
-  padStart(str) {
-    this.#value = str + this.#value;
-  }
-
-  padBoth(str) {
-    this.padStart(str);
-    this.padEnd(str);
-  }
-}
-
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="

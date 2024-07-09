@@ -1,41 +1,11 @@
-class StringBuilder {
-  #value;
+const categories = document.querySelectorAll('#categories .item');
+console.log(`Number of categories: ${categories.length}`);
 
-  constructor(initialValue) {
-    this.#value = initialValue;
-  }
+categories.forEach(category => {
+  const categoryName = category.querySelector('h2').textContent;
+  const categoryElements = category.querySelectorAll('li').length;
+  console.log(`Category: ${categoryName}`);
+  console.log(`Elements: ${categoryElements}`);
+});
 
-  getValue() {
-    return this.#value;
-  }
-
-  padEnd(str) {
-    this.#value += str;
-  }
-
-  padStart(str) {
-    this.#value = str + this.#value;
-  }
-
-  padBoth(str) {
-    this.padStart(str);
-    this.padEnd(str);
-  }
-}
-
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
-
-
-customer.setDiscount(0.15);
-console.log(customer.getDiscount()); // 0.15
-customer.addOrder(5000, "Steak");
-console.log(customer.getBalance()); // 19750
-console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 

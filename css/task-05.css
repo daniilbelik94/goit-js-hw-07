@@ -1,0 +1,101 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #424242;
+    line-height: 1.5;
+    background: #f1f1f1FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 400px;
+    
+}
+
+a {
+  width: 120px;
+  margin-left: 24px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Montserrat',"sans-serif";
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #FF7070;
+  border: 1px solid black;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+button:hover {
+  background: white;
+  color: #424242;
+}
+
+a > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+  
+}
+
+a:hover svg {
+    
+  transform: translateX(-5px);
+  transform: rotate(-180deg);
+}
+
+a:active {
+  transform: scale(0.95);
+}
+
+.widget {
+    margin-left: 24px;
+    display: inline-flex;
+    padding: 100px 88px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 8px;
+    background: #FFF;
+    position: relative;
+}
+
+button {
+    width: 150px;
+    height: 42px;
+    color: #FFF;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.64px;
+border-radius: 8px;
+background: #4E75FF;
+display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border: none;
+transition: all .2s;
+
+}
+
+button:hover {
+    background: transparent;
+    color: #111;
+    border: 1px solid #4E75FF;
+
+}
